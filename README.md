@@ -2,14 +2,17 @@
 
 Project made as part of the Unity Junior Programmer course
 
+### Given requirements:
+- The prototype must count something.
+- There must be a UI element displaying that count.
+
 ### Goals:
 - Create a simple functional game in a short amount of time
-- Incorporate the theme of counting in some way
 
 ### Mechanics:
 - Player controls paddle that needs to catch oncoming spheres
-- Games ends when timer runs out
-- catching spheres adds time to timer
+- Game ends when timer runs out
+- Catching spheres adds time to timer
 - Spheres move inreasingly more erratically as time passes (or the timer accumilates/runs out?)
 
 ### Graphics:
