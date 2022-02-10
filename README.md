@@ -1,7 +1,8 @@
 # Design Document
 
+Project made as part of the Unity Junior Programmer course
+
 ### Goals:
-- Project made as part of the Unity Junior Programmer course
 - Create a simple functional game in a short amount of time
 - Incorporate the theme of counting in some way
 
