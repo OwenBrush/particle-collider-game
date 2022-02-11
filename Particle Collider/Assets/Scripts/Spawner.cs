@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] ObjectPool spherePool;
+    [SerializeField] Paddle paddle;
 
     [SerializeField] float minSpawnTime;
     [SerializeField] float maxSpawnTime;
@@ -12,9 +13,25 @@ public class Spawner : MonoBehaviour
     [SerializeField] float xRange;
     [SerializeField] float yRange;
 
+    [SerializeField] float nextSpawn;
+
     private void Start()
     {
-        Invoke("SpawnSphere",1);
+        spherePool = GetComponent<ObjectPool>();
+        nextSpawn = maxSpawnTime;
+    }
+
+    private void Update()
+    {
+        if (paddle.gameRunning)
+        {
+            nextSpawn -= Time.deltaTime;
+            if (nextSpawn <= 0)
+            {
+                SpawnSphere();
+                nextSpawn += Random.Range(minSpawnTime, maxSpawnTime);
+            }
+        }
     }
 
     private void SpawnSphere()
@@ -27,6 +44,5 @@ public class Spawner : MonoBehaviour
             float y = Random.Range(-yRange, yRange);
             sphere.transform.position = new Vector3(x, y, 0);
         }
-        Invoke("SpawnSphere", Random.Range(minSpawnTime, maxSpawnTime));
     }
 }
