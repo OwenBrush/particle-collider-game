@@ -61,13 +61,11 @@ public class Particle : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        gameObject.SetActive(false);
-        Debug.Log(gameObject.name+" Trigger with "+ other.gameObject.name);
+        if (other.gameObject.CompareTag("Plane2D"))
+        {
+            gameObject.SetActive(false);
+        }
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(gameObject.name+ " Collision with " + collision.gameObject.name);
-        gameObject.SetActive(false);
-    }
+
 }
