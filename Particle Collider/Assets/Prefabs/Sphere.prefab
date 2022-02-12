@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7241567441452112972}
   - component: {fileID: 2681095375292230877}
   - component: {fileID: 6883015914718514061}
+  - component: {fileID: 2876027577561961621}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Sphere
@@ -63,6 +64,8 @@ MonoBehaviour:
   zigZagAnchor: {fileID: 4120178085551009666}
   rotationAnchor: {fileID: 5957837928221669935}
   sphere: {fileID: 5262686241398918751}
+  sphereAnimation: {fileID: 2876027577561961621}
+  sphereRenderer: {fileID: 5262686241398918753}
 --- !u!135 &2681095375292230877
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -92,6 +95,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!111 &2876027577561961621
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015217261339595258}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 6fcd0e70235385c4d8ac3fed09004c49, type: 2}
+  - {fileID: 7400000, guid: 76114608161bf0b4487bdec32137266e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4120178085551009666
 GameObject:
   m_ObjectHideFlags: 0

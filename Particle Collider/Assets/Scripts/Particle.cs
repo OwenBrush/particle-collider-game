@@ -27,9 +27,19 @@ public class Particle : MonoBehaviour
     [SerializeField] GameObject zigZagAnchor;
     [SerializeField] GameObject rotationAnchor;
     [SerializeField] GameObject sphere;
+    [SerializeField] Animation sphereAnimation;
+    [SerializeField] MeshRenderer sphereRenderer;
+    private MaterialPropertyBlock propertyBlock;
 
-    private void OnEnable()
+    private void Awake()
     {
+        sphereAnimation = GetComponent<Animation>();
+        propertyBlock = new MaterialPropertyBlock();
+    }
+
+    public void OnEnable()
+    {
+        sphereAnimation.Play("Sphere Fade In");
         speed = Random.Range(minSpeed, maxSpeed * timeFactor);
         xSpeed = Random.Range(0, maxXSpeed * timeFactor);
         ySpeed = Random.Range(0, maxYSpeed * timeFactor);
@@ -63,9 +73,14 @@ public class Particle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Plane2D"))
         {
-            gameObject.SetActive(false);
+            sphereAnimation.Play("Sphere Fade Away");
         }
 
+    }
+
+    public void DeSpawn()
+    {
+        gameObject.SetActive(false);
     }
 
 }

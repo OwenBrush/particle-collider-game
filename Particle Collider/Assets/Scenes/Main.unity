@@ -158,9 +158,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.75
-  m_Height: 50
+  m_Height: 29.999998
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 10.000005, z: 5.9292306e-21}
 --- !u!23 &269528307
 MeshRenderer:
   m_ObjectHideFlags: 0
