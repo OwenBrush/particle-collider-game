@@ -1,9 +1,8 @@
+# [Play the game here](https://play.unity.com/mg/other/particle-collider)
+
 # Design Document
 
 Project made as part of the Unity Junior Programmer course
-
-### Play the game:
-- https://play.unity.com/mg/other/particle-collider
 
 ### Given requirements:
 - The prototype must count something.
