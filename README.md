@@ -10,7 +10,7 @@ Project made as part of the Unity Junior Programmer course
 - There must be a UI element displaying that count.
 
 ### Goals:
-- Create a simple functional game in a short amount of time
+- Create a simple functional game protoype in a short amount of time
 
 ### Mechanics:
 - Player controls paddle that needs to catch oncoming spheres
